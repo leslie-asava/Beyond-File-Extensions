@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex Viewer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .scrollable-div {
+            max-height: 400px; /* Adjust the height as needed */
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-5 p-5 bg-white rounded-lg shadow-lg">
+        <h1 class="text-2xl font-semibold mb-4">Hex Viewer</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="mb-4">
+                <input type="file" name="file" class="border py-2 px-3 w-full rounded-lg">
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">
+                Upload and View
+            </button>
+        </form>
+        <hr class="my-4">
+        <div class="scrollable-div">
+            {% if hex_lines %}
+            <pre>
+            {{ hex_lines | safe }}
+            </pre>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

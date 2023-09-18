@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Beyond Extensions/1.0.0": {
+        "runtime": {
+          "Beyond Extensions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Beyond Extensions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
